@@ -1,0 +1,32 @@
+<h1>Add new book</h1>
+<%= form_tag :action => 'list',:method => 'get' do %>
+<p>
+<label for="NAME">NAME</label>:
+<%= text_field 'books', 'title' %>
+</p>
+
+  
+
+<p>
+<label for="AGE">AGE</label>:
+<%= text_field 'books', 'price' %>
+</p>
+
+
+<p>
+<label for="SEX">SEX</label>:
+<%= radio_button :books, 'male',false %>MALE
+<%= radio_button :books, 'male',true %>FEMALE
+</p>
+
+
+<p>
+<label for="book_description">Description</label><br/>
+<%= text_area 'books', 'description' %>
+</p>
+
+
+<%= submit_tag("save") %>
+<% end %>
+
+
